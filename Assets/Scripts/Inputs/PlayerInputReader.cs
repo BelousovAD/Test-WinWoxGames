@@ -4,18 +4,18 @@ using UnityEngine.InputSystem;
 
 namespace Inputs
 {
-    internal class InputReader
+    internal class PlayerInputReader : MonoBehaviour, IInputReader
     {
-        private readonly Input _input;
-
-        public InputReader(Input input) =>
-            _input = input;
+        private Input _input;
 
         public event Action<Vector2> MoveRequested;
 
         public event Action<Vector2> RotateRequested;
 
-        public void Enable()
+        private void Awake() =>
+            _input = new Input();
+
+        public void OnEnable()
         {
             _input.Enable();
             _input.Player.Move.performed += RequestMove;
@@ -23,7 +23,7 @@ namespace Inputs
             _input.Player.Look.performed += RequestRotate;
         }
 
-        public void Disable()
+        public void OnDisable()
         {
             _input.Disable();
             _input.Player.Move.performed -= RequestMove;
