@@ -83,7 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c121d0b8bd1478da496ffacc55e732b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PlayerMovement::PlayerMovement.Mover
-  _speed: 1
+  _speed: 3
+  _speedSprint: 6
   _rigidbody: {fileID: 4145730666482164318}
   _inputReaderComponent: {fileID: 644794189167656081}
 --- !u!54 &4145730666482164318 stripped
