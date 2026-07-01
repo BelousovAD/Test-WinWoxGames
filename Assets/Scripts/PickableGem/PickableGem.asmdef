@@ -1,0 +1,16 @@
+{
+    "name": "PickableGem",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8bfd44b924f17054ab47542d814dd43a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
