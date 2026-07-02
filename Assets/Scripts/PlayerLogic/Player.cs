@@ -3,9 +3,9 @@ using Pickable;
 using Reflex.Attributes;
 using UnityEngine;
 
-namespace Player
+namespace PlayerLogic
 {
-    internal class Player : MonoBehaviour
+    public class Player : MonoBehaviour
     {
         private const int EarnAmount = 1;
         
