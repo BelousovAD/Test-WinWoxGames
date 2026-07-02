@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Pickable
 {
-    internal class Picker : MonoBehaviour
+    public class Picker : MonoBehaviour
     {
         public event Action<IPickable> Picking;
 
