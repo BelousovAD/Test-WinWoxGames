@@ -1,4 +1,5 @@
 using System;
+using Reflex.Attributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,8 +15,9 @@ namespace Inputs
 
         public event Action<bool> SprintRequested;
 
-        private void Awake() =>
-            _input = new Input();
+        [Inject]
+        private void Initialize(Input input) =>
+            _input = input;
 
         public void OnEnable()
         {

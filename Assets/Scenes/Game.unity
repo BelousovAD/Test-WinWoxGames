@@ -355,6 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147066196}
   - component: {fileID: 147066195}
+  - component: {fileID: 147066200}
   - component: {fileID: 147066197}
   - component: {fileID: 147066198}
   - component: {fileID: 147066199}
@@ -434,6 +435,18 @@ MonoBehaviour:
   _victoryWindowId: Victory
   _enemyTrigger: {fileID: 295919753}
   _exitTrigger: {fileID: 7628747}
+--- !u!114 &147066200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147066194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859cbfa8542a443cb3cadf7b14cb42ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Inputs::Inputs.InputInstaller
 --- !u!1 &147528246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1176,7 @@ GameObject:
   - component: {fileID: 591135089}
   - component: {fileID: 591135090}
   m_Layer: 0
-  m_Name: InputEnabler
+  m_Name: CursorLocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
