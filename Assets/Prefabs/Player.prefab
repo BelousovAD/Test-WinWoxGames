@@ -1,50 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3569311143340233127
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 492167217094686377}
-  - component: {fileID: 402264261696841290}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &492167217094686377
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3569311143340233127}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4250854676520194572}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &402264261696841290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3569311143340233127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2febe63330f4ddc9b9d430a0f1d4646, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Player::Player.Player
-  _picker: {fileID: 1116641225382104209}
 --- !u!1 &4508548054913705239
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,10 +126,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8400179629608534660, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2120393101511331718}
-    - targetCorrespondingSourceObject: {fileID: 8400179629608534660, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 492167217094686377}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7642544305731073833, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6524547577430494386}
     - targetCorrespondingSourceObject: {fileID: 447890792121276000, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 644794189167656081}
@@ -185,6 +140,24 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 126358014649173986}
   m_SourcePrefab: {fileID: 100100000, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
+--- !u!1 &2621863122105378721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7642544305731073833, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
+  m_PrefabInstance: {fileID: 5651312829442117768}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6524547577430494386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621863122105378721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2febe63330f4ddc9b9d430a0f1d4646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerLogic::PlayerLogic.Player
+  _picker: {fileID: 1116641225382104209}
 --- !u!1 &2944696095567403922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7399649950776625946, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
