@@ -1,7 +1,7 @@
 using Inputs;
 using UnityEngine;
 
-namespace PlayerMovement
+namespace CharacterMovement
 {
     public class Mover : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace EnemyMovement
+namespace CharacterMovement
 {
     public class TargetReachMeter : MonoBehaviour
     {

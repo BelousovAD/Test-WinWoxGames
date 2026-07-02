@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EnemyMovement
+namespace CharacterMovement
 {
     public class Way : MonoBehaviour
     {

@@ -1,4 +1,4 @@
-using EnemyMovement;
+using CharacterMovement;
 using Inputs;
 using Triggers;
 using UnityEngine;

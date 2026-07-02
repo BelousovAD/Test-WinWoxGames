@@ -130,6 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1663462519962051896}
+  - component: {fileID: 5741410999256307562}
   m_Layer: 0
   m_Name: Rotator
   m_TagString: Untagged
@@ -152,6 +153,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8400179629608534660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5741410999256307562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458045907535954834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2249768ce2fa4ea19b2000eda9a2a926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerMovement::PlayerMovement.Rotator
+  _minVerticalAngle: -89
+  _maxVerticalAngle: 89
+  _inputReaderComponent: {fileID: 0}
+  _camera: {fileID: 0}
+  _target: {fileID: 402087778764292816}
 --- !u!1 &4119717490710948007
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4358898841804425444}
+  - component: {fileID: 7557684486092833415}
   m_Layer: 0
   m_Name: Mover
   m_TagString: Untagged
@@ -490,6 +509,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8400179629608534660}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7557684486092833415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7399649950776625946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c121d0b8bd1478da496ffacc55e732b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerMovement::PlayerMovement.Mover
+  _speed: 3
+  _speedSprint: 6
+  _rigidbody: {fileID: 8639565451386270422}
+  _inputReaderComponent: {fileID: 0}
 --- !u!1 &7642544305731073833
 GameObject:
   m_ObjectHideFlags: 0

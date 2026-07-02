@@ -2,7 +2,7 @@
     "name": "EnemyLogic",
     "rootNamespace": "",
     "references": [
-        "GUID:64868241db29d184e87339319666526a",
+        "GUID:4054e17fb62626247a5d16fc627ce403",
         "GUID:bdca04e78d96eab47933749214645538",
         "GUID:2e355151bb2c3b5418c8854955d9489c"
     ],
