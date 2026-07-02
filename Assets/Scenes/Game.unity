@@ -150,6 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Windows::Windows.WindowSpawner
   _windowPrefabs:
   - {fileID: 5484261533336858226, guid: b08ebeb3cd78a4b48a8f4325ac7cc734, type: 3}
+  - {fileID: 5484261533336858226, guid: 36ed8a6f3f3cafa4d9e172d2e660f0e7, type: 3}
+  - {fileID: 5484261533336858226, guid: d3c2e30f8c5176947b1b3ad1e5a4ff8d, type: 3}
 --- !u!4 &32762557
 Transform:
   m_ObjectHideFlags: 0
