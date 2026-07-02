@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6336437149844452654}
   - component: {fileID: 88135644442383428}
-  - component: {fileID: 4499780214851398876}
+  - component: {fileID: 544865555361769640}
   m_Layer: 0
   m_Name: EnemyTrigger
   m_TagString: Untagged
@@ -56,7 +56,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4499780214851398876
+--- !u!114 &544865555361769640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,9 +65,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4379419008597232509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebed2eeae6724e34bd2dd83599baace2, type: 3}
+  m_Script: {fileID: 11500000, guid: 554ed06bc5d945dd8a8365e6b7bf8eb6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Triggers::Triggers.EnemyTrigger
+  m_EditorClassIdentifier: Triggers::Triggers.Trigger
+  _type: 0
 --- !u!1 &4508548054913705239
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,9 +274,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2621863122105378721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4174ca34819a46d9ab002dd07eb2ded8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b32f3957f4b42948710de46670221d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Triggers::Triggers.PlayerTag
+  _type: 1
 --- !u!1 &2944696095567403922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7399649950776625946, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}

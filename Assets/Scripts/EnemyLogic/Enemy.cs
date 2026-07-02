@@ -10,7 +10,7 @@ namespace EnemyLogic
         [SerializeField] private EnemyInputReader _inputReader;
         [SerializeField] private TargetReachMeter _targetReachMeter;
         [SerializeField] private Way _way;
-        [SerializeField] private PlayerTrigger _playerTrigger;
+        [SerializeField] private Trigger _playerTrigger;
 
         private void OnEnable()
         {
@@ -51,8 +51,8 @@ namespace EnemyLogic
 
         private void FocusOnPlayer()
         {
-            _targetReachMeter.MoveTo(_playerTrigger.PlayerTransform);
-            _inputReader.SetTarget(_playerTrigger.PlayerTransform);
+            _targetReachMeter.MoveTo(_playerTrigger.Tag.transform);
+            _inputReader.SetTarget(_playerTrigger.Tag.transform);
         }
     }
 }

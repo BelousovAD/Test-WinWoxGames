@@ -9,8 +9,8 @@ namespace Gameplay
     {
         [SerializeField] private string _defeatWindowId;
         [SerializeField] private string _victoryWindowId;
-        [SerializeField] private EnemyTrigger _enemyTrigger;
-        [SerializeField] private PlayerTrigger _exitTrigger;
+        [SerializeField] private Trigger _enemyTrigger;
+        [SerializeField] private Trigger _exitTrigger;
 
         private ContainerBuilder _builder;
         private Judge _judge;

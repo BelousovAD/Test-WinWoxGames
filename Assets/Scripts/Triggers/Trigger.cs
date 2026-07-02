@@ -4,26 +4,28 @@ using UnityEngine;
 namespace Triggers
 {
     [RequireComponent(typeof(Collider))]
-    public class PlayerTrigger : MonoBehaviour
+    public class Trigger : MonoBehaviour
     {
+        [SerializeField] private TagType _type;
+        
         public event Action<bool> StateChanged;
 
-        public Transform PlayerTransform { get; private set; }
+        public Tag Tag { get; private set; }
 
         private void OnTriggerEnter(Collider collision)
         {
-            if (collision.TryGetComponent(out PlayerTag playerTag))
+            if (collision.TryGetComponent(out Tag tagComponent) && tagComponent.Type == _type)
             {
-                PlayerTransform = playerTag.transform;
+                Tag = tagComponent;
                 StateChanged?.Invoke(true);
             }
         }
 
         private void OnTriggerExit(Collider collision)
         {
-            if (collision.TryGetComponent(out PlayerTag _))
+            if (collision.TryGetComponent(out Tag tagComponent) && tagComponent.Type == _type)
             {
-                PlayerTransform = null;
+                Tag = tagComponent;
                 StateChanged?.Invoke(false);
             }
         }
