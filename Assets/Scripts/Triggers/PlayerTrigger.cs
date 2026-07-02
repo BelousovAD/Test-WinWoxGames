@@ -1,30 +1,29 @@
 using System;
-using PlayerLogic;
 using UnityEngine;
 
-namespace EnemyMovement
+namespace Triggers
 {
     [RequireComponent(typeof(Collider))]
     public class PlayerTrigger : MonoBehaviour
     {
-        private Player _player;
-
         public event Action<bool> StateChanged;
-        
-        public Player Player => _player;
+
+        public Transform PlayerTransform { get; private set; }
 
         private void OnTriggerEnter(Collider collision)
         {
-            if (collision.TryGetComponent(out _player))
+            if (collision.TryGetComponent(out PlayerTag playerTag))
             {
+                PlayerTransform = playerTag.transform;
                 StateChanged?.Invoke(true);
             }
         }
 
         private void OnTriggerExit(Collider collision)
         {
-            if (collision.TryGetComponent(out _player))
+            if (collision.TryGetComponent(out PlayerTag _))
             {
+                PlayerTransform = null;
                 StateChanged?.Invoke(false);
             }
         }

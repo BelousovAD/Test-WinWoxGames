@@ -1,10 +1,11 @@
 using EnemyMovement;
 using Inputs;
+using Triggers;
 using UnityEngine;
 
 namespace EnemyLogic
 {
-    internal class Enemy : MonoBehaviour
+    public class Enemy : MonoBehaviour
     {
         [SerializeField] private EnemyInputReader _inputReader;
         [SerializeField] private TargetReachMeter _targetReachMeter;
@@ -50,8 +51,8 @@ namespace EnemyLogic
 
         private void FocusOnPlayer()
         {
-            _targetReachMeter.MoveTo(_playerTrigger.Player.transform);
-            _inputReader.SetTarget(_playerTrigger.Player.transform);
+            _targetReachMeter.MoveTo(_playerTrigger.PlayerTransform);
+            _inputReader.SetTarget(_playerTrigger.PlayerTransform);
         }
     }
 }
