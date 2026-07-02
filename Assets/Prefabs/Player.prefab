@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4379419008597232509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6336437149844452654}
+  - component: {fileID: 88135644442383428}
+  - component: {fileID: 4499780214851398876}
+  m_Layer: 0
+  m_Name: EnemyTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6336437149844452654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4379419008597232509}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4250854676520194572}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &88135644442383428
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4379419008597232509}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4499780214851398876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4379419008597232509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebed2eeae6724e34bd2dd83599baace2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Triggers::Triggers.EnemyTrigger
 --- !u!1 &4508548054913705239
 GameObject:
   m_ObjectHideFlags: 0
@@ -68,6 +136,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1104c1afc670e88478d5f60b375ddf96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Pickable::Pickable.Picker
+--- !u!1 &8515523260350518393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3495710745444502975}
+  - component: {fileID: 8087135377249486269}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3495710745444502975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8515523260350518393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4250854676520194572}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8087135377249486269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8515523260350518393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2febe63330f4ddc9b9d430a0f1d4646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PlayerLogic::PlayerLogic.Player
+  _picker: {fileID: 1116641225382104209}
 --- !u!1001 &5651312829442117768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126,10 +239,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8400179629608534660, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2120393101511331718}
+    - targetCorrespondingSourceObject: {fileID: 8400179629608534660, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3495710745444502975}
+    - targetCorrespondingSourceObject: {fileID: 8400179629608534660, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6336437149844452654}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7642544305731073833, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6524547577430494386}
+      addedObject: {fileID: 3151319319878892998}
     - targetCorrespondingSourceObject: {fileID: 447890792121276000, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 644794189167656081}
@@ -145,7 +264,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7642544305731073833, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
   m_PrefabInstance: {fileID: 5651312829442117768}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6524547577430494386
+--- !u!114 &3151319319878892998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,10 +273,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2621863122105378721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2febe63330f4ddc9b9d430a0f1d4646, type: 3}
+  m_Script: {fileID: 11500000, guid: 4174ca34819a46d9ab002dd07eb2ded8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: PlayerLogic::PlayerLogic.Player
-  _picker: {fileID: 1116641225382104209}
+  m_EditorClassIdentifier: Triggers::Triggers.PlayerTag
 --- !u!1 &2944696095567403922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7399649950776625946, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}

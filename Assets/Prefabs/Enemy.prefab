@@ -112,6 +112,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e138c0d235a9a4da6b49a7ca0bf1ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: EnemyMovement::EnemyMovement.PlayerTrigger
+--- !u!1 &5669012752263950599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6680411016513257672}
+  - component: {fileID: 7970723681319415569}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6680411016513257672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669012752263950599}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6937991714224781689}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7970723681319415569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669012752263950599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07f9f7f91b248769f3a7e19332e7522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: EnemyLogic::EnemyLogic.Enemy
+  _inputReader: {fileID: 6586982003242569493}
+  _targetReachMeter: {fileID: 5404615236140935627}
+  _way: {fileID: 8224403874529965209}
+  _playerTrigger: {fileID: 5478516178991509690}
 --- !u!1 &6241399325667160777
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,10 +269,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8400179629608534660, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5877256166762844399}
+    - targetCorrespondingSourceObject: {fileID: 8400179629608534660, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6680411016513257672}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7642544305731073833, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2845669548612729348}
+      addedObject: {fileID: 7267526289627959221}
     - targetCorrespondingSourceObject: {fileID: 447890792121276000, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6586982003242569493}
@@ -312,7 +363,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7642544305731073833, guid: 19b91b9f08dfb754aa29cb81a2d77ffe, type: 3}
   m_PrefabInstance: {fileID: 1503037246414175229}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2845669548612729348
+--- !u!114 &7267526289627959221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,10 +372,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9138958012495056084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07f9f7f91b248769f3a7e19332e7522, type: 3}
+  m_Script: {fileID: 11500000, guid: a8d7119ad4a04e32b7eb82fbefa6d056, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyLogic.Enemy
-  _inputReader: {fileID: 6586982003242569493}
-  _targetReachMeter: {fileID: 5404615236140935627}
-  _way: {fileID: 8224403874529965209}
-  _playerTrigger: {fileID: 5478516178991509690}
+  m_EditorClassIdentifier: Triggers::Triggers.EnemyTag
