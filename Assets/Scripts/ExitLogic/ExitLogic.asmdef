@@ -1,0 +1,17 @@
+{
+    "name": "ExitLogic",
+    "rootNamespace": "",
+    "references": [
+        "GUID:008f65d56f5918d4ca958a2f25c52a7c",
+        "GUID:1530a967b84cfb44dbdd5e8a1989764f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
