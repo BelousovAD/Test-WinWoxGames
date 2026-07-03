@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Inputs
 {
-    public interface IInputReader
+    public interface IInput
     {
         public event Action<Vector2> MoveRequested;
         

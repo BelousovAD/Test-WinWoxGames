@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Inputs
 {
-    public class EnemyInputReader : MonoBehaviour, IInputReader
+    public class EnemyInput : MonoBehaviour, IInput
     {
         [SerializeField] private Transform _transform;
 

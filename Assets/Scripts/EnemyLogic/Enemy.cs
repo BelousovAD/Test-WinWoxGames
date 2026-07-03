@@ -7,7 +7,7 @@ namespace EnemyLogic
 {
     public class Enemy : MonoBehaviour
     {
-        [SerializeField] private EnemyInputReader _inputReader;
+        [SerializeField] private EnemyInput _input;
         [SerializeField] private TargetReachMeter _targetReachMeter;
         [SerializeField] private Way _way;
         [SerializeField] private Trigger _playerTrigger;
@@ -15,17 +15,17 @@ namespace EnemyLogic
         private void OnEnable()
         {
             _playerTrigger.StateChanged += ChangeFocus;
-            _targetReachMeter.TargetReached += ChooseNextTarget;
+            _targetReachMeter.TargetReached += ChooseNextWaypoint;
             FocusOnCurrentTarget();
         }
 
         private void OnDisable()
         {
             _playerTrigger.StateChanged -= ChangeFocus;
-            _targetReachMeter.TargetReached -= ChooseNextTarget;
+            _targetReachMeter.TargetReached -= ChooseNextWaypoint;
         }
 
-        private void ChooseNextTarget()
+        private void ChooseNextWaypoint()
         {
             _way.Next();
             FocusOnCurrentTarget();
@@ -46,13 +46,13 @@ namespace EnemyLogic
         private void FocusOnCurrentTarget()
         {
             _targetReachMeter.MoveTo(_way.Current);
-            _inputReader.SetTarget(_way.Current);
+            _input.SetTarget(_way.Current);
         }
 
         private void FocusOnPlayer()
         {
             _targetReachMeter.MoveTo(_playerTrigger.Tag.transform);
-            _inputReader.SetTarget(_playerTrigger.Tag.transform);
+            _input.SetTarget(_playerTrigger.Tag.transform);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace CharacterMovement
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private MonoBehaviour _inputReaderComponent;
 
-        private IInputReader _inputReader;
+        private IInput _input;
         private Vector3 _horizontalVelocity;
         private float _currentSpeed;
 
@@ -21,14 +21,14 @@ namespace CharacterMovement
                 return;
             }
             
-            if (_inputReaderComponent is IInputReader inputReader)
+            if (_inputReaderComponent is IInput inputReader)
             {
-                _inputReader = inputReader;
+                _input = inputReader;
             }
             else
             {
                 _inputReaderComponent = null;
-                Debug.LogError($"Field:{nameof(_inputReaderComponent)} must inherited from {nameof(IInputReader)}");
+                Debug.LogError($"Field:{nameof(_inputReaderComponent)} must inherited from {nameof(IInput)}");
             }
         }
 
@@ -37,14 +37,14 @@ namespace CharacterMovement
 
         private void OnEnable()
         {
-            _inputReader.MoveRequested += UpdateHorizontalVelocity;
-            _inputReader.SprintRequested += UpdateSpeed;
+            _input.MoveRequested += UpdateHorizontalVelocity;
+            _input.SprintRequested += UpdateSpeed;
         }
 
         private void OnDisable()
         {
-            _inputReader.MoveRequested -= UpdateHorizontalVelocity;
-            _inputReader.SprintRequested -= UpdateSpeed;
+            _input.MoveRequested -= UpdateHorizontalVelocity;
+            _input.SprintRequested -= UpdateSpeed;
         }
 
         private void FixedUpdate() =>

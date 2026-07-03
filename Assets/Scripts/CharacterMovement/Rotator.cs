@@ -11,7 +11,7 @@ namespace CharacterMovement
         [SerializeField] private Camera _camera;
         [SerializeField] private Transform _target;
 
-        private IInputReader _inputReader;
+        private IInput _input;
         private float _horizontalAngle;
         private float _verticalAngle;
         private Transform _cameraTransform;
@@ -23,14 +23,14 @@ namespace CharacterMovement
                 return;
             }
             
-            if (_inputReaderComponent is IInputReader inputReader)
+            if (_inputReaderComponent is IInput inputReader)
             {
-                _inputReader = inputReader;
+                _input = inputReader;
             }
             else
             {
                 _inputReaderComponent = null;
-                Debug.LogError($"Field:{nameof(_inputReaderComponent)} must inherited from {nameof(IInputReader)}");
+                Debug.LogError($"Field:{nameof(_inputReaderComponent)} must inherited from {nameof(IInput)}");
             }
         }
 
@@ -43,10 +43,10 @@ namespace CharacterMovement
         }
 
         private void OnEnable() =>
-            _inputReader.RotateRequested += Rotate;
+            _input.RotateRequested += Rotate;
 
         private void OnDisable() =>
-            _inputReader.RotateRequested -= Rotate;
+            _input.RotateRequested -= Rotate;
         
         private void Rotate(Vector2 delta)
         {

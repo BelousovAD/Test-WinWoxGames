@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace Inputs
 {
-    internal class PlayerInputReader : MonoBehaviour, IInputReader
+    internal class PlayerInput : MonoBehaviour, IInput
     {
         private Input _input;
 
