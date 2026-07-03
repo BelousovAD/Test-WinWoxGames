@@ -6,24 +6,24 @@ namespace ExitLogic
 {
     internal class Exit : MonoBehaviour
     {
-        private Gem _gem;
+        private ResourceAccumulator _gemAccumulator;
 
         [Inject]
-        private void Initialize(Gem gem) =>
-            _gem = gem;
+        private void Initialize(ResourceAccumulator resourceAccumulator) =>
+            _gemAccumulator = resourceAccumulator;
 
         private void OnEnable()
         {
-            _gem.Changed += UpdateView;
+            _gemAccumulator.Changed += UpdateView;
             UpdateView();
         }
 
         private void OnDisable() =>
-            _gem.Changed -= UpdateView;
+            _gemAccumulator.Changed -= UpdateView;
 
         private void UpdateView()
         {
-            if (_gem.Value == _gem.Max)
+            if (_gemAccumulator.Value == _gemAccumulator.Max)
             {
                 gameObject.SetActive(false);
             }

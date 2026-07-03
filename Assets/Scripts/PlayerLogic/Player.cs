@@ -11,11 +11,11 @@ namespace PlayerLogic
         
         [SerializeField] private Picker _picker;
 
-        private Gem _gem;
+        private ResourceAccumulator _gemAccumulator;
 
         [Inject]
-        private void Initialize(Gem gem) =>
-            _gem = gem;
+        private void Initialize(ResourceAccumulator resourceAccumulator) =>
+            _gemAccumulator = resourceAccumulator;
 
         private void OnEnable() =>
             _picker.Picking += HandlePickUp;
@@ -27,7 +27,7 @@ namespace PlayerLogic
         {
             if (pickable is PickableGem.Gem)
             {
-                _gem.Earn(EarnAmount);
+                _gemAccumulator.Collect(EarnAmount);
             }
         }
     }

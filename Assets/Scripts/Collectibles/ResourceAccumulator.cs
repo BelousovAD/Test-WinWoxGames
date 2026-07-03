@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Collectibles
 {
-    public class Gem
+    public class ResourceAccumulator
     {
         private const int Min = 0;
 
         private int _value;
 
-        public Gem(int defaultValue = Min, int max = int.MaxValue)
+        public ResourceAccumulator(int defaultValue = Min, int max = int.MaxValue)
         {
             Max = max;
             Value = defaultValue;
@@ -33,7 +33,7 @@ namespace Collectibles
             }
         }
 
-        public void Earn(int amount)
+        public void Collect(int amount)
         {
             if (amount < 0)
             {
