@@ -17,6 +17,8 @@ namespace Collectibles
 
         public event Action<int> Changed;
 
+        public event Action Filled;
+
         public int Max { get; }
 
         public int Value
@@ -29,6 +31,11 @@ namespace Collectibles
                 {
                     _value = Mathf.Clamp(value, Min, Max);
                     Changed?.Invoke(_value);
+
+                    if (_value == Max)
+                    {
+                        Filled?.Invoke();
+                    }
                 }
             }
         }

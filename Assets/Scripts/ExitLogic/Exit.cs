@@ -12,21 +12,13 @@ namespace ExitLogic
         private void Initialize(ResourceAccumulator resourceAccumulator) =>
             _gemAccumulator = resourceAccumulator;
 
-        private void OnEnable()
-        {
-            _gemAccumulator.Changed += UpdateView;
-            UpdateView();
-        }
+        private void OnEnable() =>
+            _gemAccumulator.Filled += DisableObject;
 
         private void OnDisable() =>
-            _gemAccumulator.Changed -= UpdateView;
+            _gemAccumulator.Filled -= DisableObject;
 
-        private void UpdateView(int value = 0)
-        {
-            if (_gemAccumulator.Value == _gemAccumulator.Max)
-            {
-                gameObject.SetActive(false);
-            }
-        }
+        private void DisableObject() =>
+            gameObject.SetActive(false);
     }
 }
