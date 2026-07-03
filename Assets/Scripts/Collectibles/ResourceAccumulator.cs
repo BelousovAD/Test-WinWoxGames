@@ -15,7 +15,7 @@ namespace Collectibles
             Value = defaultValue;
         }
 
-        public event Action Changed;
+        public event Action<int> Changed;
 
         public int Max { get; }
 
@@ -28,7 +28,7 @@ namespace Collectibles
                 if (value != _value)
                 {
                     _value = Mathf.Clamp(value, Min, Max);
-                    Changed?.Invoke();
+                    Changed?.Invoke(_value);
                 }
             }
         }

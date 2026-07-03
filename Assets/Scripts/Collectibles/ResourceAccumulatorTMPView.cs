@@ -11,13 +11,17 @@ namespace Collectibles
 
         private TMP_Text _textField;
         private ResourceAccumulator _resourceAccumulator;
+        private int _max;
 
         [Inject]
         private void Initialize(ResourceAccumulator resourceAccumulator) =>
             _resourceAccumulator = resourceAccumulator;
 
-        private void Awake() =>
+        private void Awake()
+        {
             _textField = GetComponent<TMP_Text>();
+            _max = _resourceAccumulator.Max;
+        }
 
         private void OnEnable()
         {
@@ -28,7 +32,7 @@ namespace Collectibles
         private void OnDisable() =>
             _resourceAccumulator.Changed -= UpdateView;
 
-        private void UpdateView() =>
-            _textField.text = string.Format(_format, _resourceAccumulator.Value, _resourceAccumulator.Max);
+        private void UpdateView(int value = 0) =>
+            _textField.text = string.Format(_format, value, _max);
     }
 }

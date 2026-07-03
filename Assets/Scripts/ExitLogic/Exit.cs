@@ -21,7 +21,7 @@ namespace ExitLogic
         private void OnDisable() =>
             _gemAccumulator.Changed -= UpdateView;
 
-        private void UpdateView()
+        private void UpdateView(int value = 0)
         {
             if (_gemAccumulator.Value == _gemAccumulator.Max)
             {
