@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7986942543994473969}
   m_Layer: 0
-  m_Name: InputReader
+  m_Name: Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
