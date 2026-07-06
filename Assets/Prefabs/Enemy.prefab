@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07f9f7f91b248769f3a7e19332e7522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: EnemyLogic::EnemyLogic.Enemy
-  _inputReader: {fileID: 6586982003242569493}
+  _input: {fileID: 6586982003242569493}
   _targetReachMeter: {fileID: 5404615236140935627}
   _way: {fileID: 8224403874529965209}
   _playerTrigger: {fileID: 5478516178991509690}
